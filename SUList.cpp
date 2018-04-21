@@ -44,3 +44,26 @@ void SUList<DataType>::putFront(const DataType&)
     //
     //
 }
+
+template <class DataType>
+int SUList<DataType>::size()
+{
+    //
+    //
+    return 0;
+}
+
+template <class DataType>
+bool SUList<DataType>::contains(const DataType&)
+{
+    //
+    //
+    return false;
+}
+
+template <class DataType>
+SUList<DataType>& SUList<DataType>::operator=(const SUList<DataType>&)
+{
+    //
+    //
+}
