@@ -105,22 +105,53 @@ void SUList<DataType>::putBack(const DataType& n)
 template <class DataType>
 int SUList<DataType>::size()
 {
-    //
-    //
-    return 0;
+    ListNode* cursor = head;
+    int count = 0;
+    while(cursor)
+    {
+        count++;
+        cursor = cursor->next;
+    }
+
+    return cursor;
 }
 
 template <class DataType>
-bool SUList<DataType>::contains(const DataType&)
+bool SUList<DataType>::contains(const DataType& query)
 {
-    //
-    //
+    ListNode* cursor = head;
+    while(cursor)
+    {
+        if(cursor->data == query)
+        {
+            return true;
+        }
+    }
+
     return false;
 }
 
 template <class DataType>
-SUList<DataType>& SUList<DataType>::operator=(const SUList<DataType>&)
+SUList<DataType>& SUList<DataType>::operator=(const SUList<DataType>& old)
 {
-    //
-    //
+    if(this != &old)
+    {
+        ListNode* dCursor = this->head;
+        ListNode* dTemp;
+        while(dCursor)
+        {
+            dTemp = dCursor->next;
+            delete dCursor;
+            dCursor = dTemp;
+        }
+
+        this->head = nullptr;
+        ListNode* oldCursor = old.head;
+        while(oldCursor)
+        {
+            this->putFront(oldCursor->data);
+            oldCursor = oldCursor->next;
+        }
+    }
+    return *this;
 }
