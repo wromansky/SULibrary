@@ -1,20 +1,14 @@
+#include "SUList.h"
+
 #ifndef SUSTACKLIST_H
 #define SUSTACKLIST_H
 template <class DataType>
 class SUStackList{
     private:
-        /**
-         * For the list-backed implementation:
-         *
-         * SUList<DataType> list;
-         *
-         * For the array-based:
-         *
-         * DataType* arr;        // The array of items
-         * int       capacity;   // The size of the current array
-         * int       top;        // The location of the top element
-         */
+        SUList<DataType> list;
+
     public:
+
         SUStackList();                   // Constructor
         SUStackList(const SUStackList &); // Copy Constructor
         ~SUStackList();                  // Destructor
@@ -32,17 +26,9 @@ class SUStackList{
 template <class DataType>
 class SUStackArray{
     private:
-        /**
-         * For the list-backed implementation:
-         *
-         * SUList<DataType> list;
-         *
-         * For the array-based:
-         *
-         * DataType* arr;        // The array of items
-         * int       capacity;   // The size of the current array
-         * int       top;        // The location of the top element
-         */
+        DataType* array;
+        int capacity;
+        int top;
     public:
         SUStackArray();                   // Constructor
         SUStackArray(const SUStackArray &); // Copy Constructor
