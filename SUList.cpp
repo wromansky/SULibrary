@@ -74,8 +74,17 @@ DataType SUList<DataType>::getBack()
 template <class DataType>
 void SUList<DataType>::putFront(const DataType& n)
 {
-    
-    //
+    ListNode* newNode = new ListNode;
+    newNode->next = nullptr;
+    newNode->data = n;
+
+    if(head==nullptr)
+    {
+        head =  newNode;
+    } else {
+        newNode->next = head;
+        head = newNode;
+    }
 }
 
 template <class DataType>
