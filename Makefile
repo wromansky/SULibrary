@@ -1,8 +1,8 @@
 all:
-	g++ -std=c++11 -o project3 SUList.cpp SUStack.cpp SUQueue.cpp main.cpp
+	g++ -std=c++11 -o project3.out SUList.cpp SUStack.cpp SUQueue.cpp main.cpp
 
-project3: SUList.o SUStack.o SUQueue.o main.o
-	g++ -std=c++11 -o project3 SUList.o SUStack.o SUQueue.o main.o
+project3.out: SUList.o SUStack.o SUQueue.o main.o
+	g++ -std=c++11 -o project3.out SUList.o SUStack.o SUQueue.o main.o
 
 SUList.o: SUList.cpp
 	g++ -std=c++11 -c SUList.cpp
