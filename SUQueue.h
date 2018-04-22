@@ -24,7 +24,7 @@ void enqueue(const DataType&);  // Enqueues some data
 void dequeue(DataType&);        // Get the front element and store it
 void printQueue() const;        // Prints the queue from the front to the rear
 SUQueueList<DataType>& operator=(const SUQueueList<DataType>&); // Assignment operator
-}
+};
 
 template <class DataType>
 class SUQueueArray{
@@ -52,4 +52,4 @@ void enqueue(const DataType&);  // Enqueues some data
 void dequeue(DataType&);        // Get the front element and store it
 void printQueue() const;        // Prints the queue from the front to the rear
 SUQueueArray<DataType>& operator=(const SUQueueArray<DataType>&); // Assignment operator
-}
+};
