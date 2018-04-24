@@ -1,6 +1,6 @@
 #include<iostream>
-#include "SUList.cpp"
-#include "SUStack.h"
+#include "SUList.h"
+//#include "SUStack.h"
 //#include "SUQueue.h"
 #include "payRoll.h"
 
