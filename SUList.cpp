@@ -52,6 +52,11 @@ DataType SUList<DataType>::getFront()
     head = head->next;
     delete temp;
 
+    if(head==nullptr)
+    {
+        tail = nullptr;
+    }
+
     return front;
 }
 
@@ -76,13 +81,16 @@ void SUList<DataType>::putFront(const DataType& n)
 {
     ListNode* newNode = new ListNode;
     newNode->next = nullptr;
+    newNode->prev = nullptr;
     newNode->data = n;
 
     if(head==nullptr)
     {
         head =  newNode;
+        tail = newNode;
     } else {
         newNode->next = head;
+        head->prev = newNode;
         head = newNode;
     }
 }
