@@ -51,7 +51,6 @@ payRoll p;
   myList.putBack(5);
   myList.putFront(3);
   //myList.display();
-
   std::cout << "++++++++++++\n";
 
   /**
