@@ -1,4 +1,3 @@
-#include "SUList.h"
 #include <iostream>
 
 using namespace std;
@@ -73,6 +72,11 @@ DataType SUList<DataType>::getBack()
    tail = tail->prev;
    delete temp;
 
+   if(tail==nullptr)
+   {
+       head = nullptr;
+   }
+
    return back;
 }
 
@@ -106,7 +110,10 @@ void SUList<DataType>::putBack(const DataType& n)
     if(head == nullptr)
     {
         head = tail = newNode;
-        return;
+    } else {
+        newNode->prev = tail;
+        tail->next = newNode;
+        tail = newNode;
     }
 }
 
