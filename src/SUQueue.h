@@ -1,12 +1,15 @@
+#ifndef SUQUEUELIST_H
+#define SUQUEUELIST_H
+#include "SUList.h"
 template <class DataType>
 class SUQueueList{
 private:
 /**
 2
 * For the list-backed implementation:
-*
-* SUList<DataType> list;
-*
+*/
+SUList<DataType> list;
+/*
 * For the array-based:
 *
 * DataType* arr;        // The array of items
@@ -53,3 +56,5 @@ void dequeue(DataType&);        // Get the front element and store it
 void printQueue() const;        // Prints the queue from the front to the rear
 SUQueueArray<DataType>& operator=(const SUQueueArray<DataType>&); // Assignment operator
 };
+#include "SUQueue.cpp"
+#endif
