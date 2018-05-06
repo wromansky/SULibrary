@@ -7,8 +7,7 @@ int SUQueueList<DataType>::size()
 template <class DataType>
 bool SUQueueList<DataType>::isEmpty()
 {
-    //
-    return false;
+    return list.isEmpty();
 }
 
 template <class DataType>
@@ -30,7 +29,7 @@ void SUQueueList<DataType>::printQueue()
 }
 
 template <class DataType>
-SUQueueList<DataType>&::operator=(constSUQueueList<DataType>&)
+SUQueueList<DataType>&::operator=(constSUQueueList<DataType>& n)
 {
-    //
+    st = n;
 }
