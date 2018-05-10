@@ -1,7 +1,8 @@
+// Implementation file for the SUList Class
 #include <iostream>
-
 using namespace std;
 
+//Default copy constructor
 template <class DataType>
 SUList<DataType>::SUList()
 {
@@ -10,6 +11,7 @@ SUList<DataType>::SUList()
     tail = nullptr;
 }
 
+// Non-Default copy constructor
 template <class DataType>
 SUList<DataType>::SUList(const SUList& old)
 {
@@ -20,9 +22,10 @@ SUList<DataType>::SUList(const SUList& old)
         this->putfront(oldCursor->data);
         oldCursor = oldCursor->next;
     }
-    
+
 }
 
+//Desturctor
 template <class DataType>
 SUList<DataType>::~SUList()
 {
@@ -38,6 +41,7 @@ SUList<DataType>::~SUList()
 
 }
 
+//Remove and return the front part of the linked list
 template <class DataType>
 DataType SUList<DataType>::getFront()
 {
@@ -59,6 +63,7 @@ DataType SUList<DataType>::getFront()
     return front;
 }
 
+//Remove and return the back part of the linked list
 template <class DataType>
 DataType SUList<DataType>::getBack()
 {
@@ -80,6 +85,7 @@ DataType SUList<DataType>::getBack()
    return back;
 }
 
+// Add content to the front of the linked list
 template <class DataType>
 void SUList<DataType>::putFront(const DataType& n)
 {
@@ -92,13 +98,16 @@ void SUList<DataType>::putFront(const DataType& n)
     {
         head =  newNode;
         tail = newNode;
-    } else {
+    }
+    else
+    {
         newNode->next = head;
         head->prev = newNode;
         head = newNode;
     }
 }
 
+//Add content to the back of the linked list
 template <class DataType>
 void SUList<DataType>::putBack(const DataType& n)
 {
@@ -110,13 +119,16 @@ void SUList<DataType>::putBack(const DataType& n)
     if(head == nullptr)
     {
         head = tail = newNode;
-    } else {
+    }
+    else
+    {
         newNode->prev = tail;
         tail->next = newNode;
         tail = newNode;
     }
 }
 
+//Reveals the number of elements in the linked list
 template <class DataType>
 int SUList<DataType>::size()
 {
@@ -131,6 +143,7 @@ int SUList<DataType>::size()
     return cursor;
 }
 
+// Tests the condition with the bool data type
 template <class DataType>
 bool SUList<DataType>::contains(const DataType& query)
 {
@@ -146,6 +159,7 @@ bool SUList<DataType>::contains(const DataType& query)
     return false;
 }
 
+//Overloader assignment
 template <class DataType>
 SUList<DataType>& SUList<DataType>::operator=(const SUList<DataType>& old)
 {
