@@ -1,11 +1,11 @@
 template <class DataType>
-int SUQueueList<DataType>::size()
+int SUQueueList<DataType>::size() const
 {
     return list.size();
 }
 
 template <class DataType>
-bool SUQueueList<DataType>::isEmpty()
+bool SUQueueList<DataType>::isEmpty() const
 {
     return list.isEmpty();
 }
@@ -23,13 +23,13 @@ void SUQueueList<DataType>::dequeue(DataType& n)
 }
 
 template <class DataType>
-void SUQueueList<DataType>::printQueue()
+void SUQueueList<DataType>::printQueue() const
 {
     //
 }
 
 template <class DataType>
-SUQueueList<DataType>&::operator=(constSUQueueList<DataType>& n)
+SUQueueList<DataType>& SUQueueList<DataType>::operator=(const SUQueueList<DataType>& n)
 {
-    st = n;
+    list = n;
 }
