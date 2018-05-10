@@ -159,7 +159,7 @@ bool SUList<DataType>::contains(const DataType& query)
     return false;
 }
 
-//Overloader assignment
+//Overloaded assignment
 template <class DataType>
 SUList<DataType>& SUList<DataType>::operator=(const SUList<DataType>& old)
 {
