@@ -50,19 +50,13 @@ payRoll p;
   myList.putBack(4);
   myList.putBack(5);
   myList.putFront(3);
-  //myList.display();
-  std::cout << "++++++++++++\n";
-
-  /**
-   * Test the SUList using PayRoll
-   */
-  /*
+  //myList.display() 
+  
   pList.putFront(payRoll("Alice", 10, 35));
   pList.putFront(payRoll("Bob", 20, 35));
   pList.putBack(payRoll("Charlie", 25, 35));
   pList.putBack(payRoll("Diana", 10, 35));
   pList.putFront(payRoll("Eve", 30, 35));
-*/
   //pList.display();
 
   std::cout << "++++++++++++\n";
