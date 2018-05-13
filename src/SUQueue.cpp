@@ -9,7 +9,7 @@ using namespace std;
 template <class DataType>
 SUQueueList<DataType>::SUQueueList()
 {
-   list;
+    SUList<DataType> list;
 }
 
 // Copy Constructor
@@ -23,7 +23,7 @@ SUQueueList<DataType>::SUQueueList(const SUQueueList &old)
 template <class DataType>
 SUQueueList<DataType>::~SUQueueList()
 {
-    ~list();
+    list.~SUList();
 }
 
 // Reveals number of elements in the Queue Linked List
