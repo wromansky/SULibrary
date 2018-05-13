@@ -1,6 +1,6 @@
 #include<iostream>
 #include "SUList.h"
-//#include "SUStack.h"
+#include "SUStack.h"
 #include "SUQueue.h"
 #include "payRoll.h"
 
@@ -36,10 +36,10 @@ payRoll p;
   //SUStackList<int> iStackList; // TODO
   //SUStackList<payRoll> pStackList;
 
-  //SUQueueArr<int> iQueueArr; // TODO
-  //SUQueueArr<PayRoll> pQueueArr; // TODO 
-  //SUQueueList<int> iQueueList; // TODO
-  //SUQueueList<PayRoll> pQueueList; // TODO
+  SUQueueArray<int> iQueueArr; // TODO
+  SUQueueArray<payRoll> pQueueArr; // TODO 
+  SUQueueList<int> iQueueList; // TODO
+  SUQueueList<payRoll> pQueueList; // TODO
 
   /**
    * Test the SUList using ints
