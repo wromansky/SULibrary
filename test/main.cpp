@@ -22,6 +22,8 @@
  *  - Templated definitions
  */
 
+std::ostream& operator << (std::ostream&, const payRoll&);
+
 int main(){
 payRoll p;
   /*
@@ -60,7 +62,6 @@ payRoll p;
   //pList.display();
   payRoll n = pList.getFront();
   cout << n;
-  std::cout << "++++++++++++\n";
 
   /**
    * Test the SUStack using PayRoll
@@ -76,7 +77,7 @@ payRoll p;
   return 0;
 }
 
-std::ostream& operator << (std::ostream& os, const payRoll p)
+std::ostream& operator << (std::ostream& os, const payRoll& p)
 {
     p.printPayCheck();
     return os;
