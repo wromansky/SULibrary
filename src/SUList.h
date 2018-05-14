@@ -22,6 +22,7 @@ class SUList{
         int size();                    // Returns the number of elements
         bool contains(const DataType&);// Tests for membership
         SUList<DataType>& operator=(const SUList<DataType>&); // Overloaded assignment
+        void display();
 };
 #include "SUList.cpp"
 #endif

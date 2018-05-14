@@ -50,7 +50,7 @@ payRoll p;
   myList.putBack(4);
   myList.putBack(5);
   myList.putFront(3);
-  //myList.display() 
+  myList.display(); 
   
   pList.putFront(payRoll("Alice", 10, 35));
   pList.putFront(payRoll("Bob", 20, 35));
@@ -58,7 +58,8 @@ payRoll p;
   pList.putBack(payRoll("Diana", 10, 35));
   pList.putFront(payRoll("Eve", 30, 35));
   //pList.display();
-
+  payRoll n = pList.getFront();
+  cout << n;
   std::cout << "++++++++++++\n";
 
   /**
@@ -73,6 +74,12 @@ payRoll p;
   pStackList.pop().printPayCheck();
 */
   return 0;
+}
+
+std::ostream& operator << (std::ostream& os, const payRoll p)
+{
+    p.printPayCheck();
+    return os;
 }
 
 /** OUTPUT OF THIS PROGRAM

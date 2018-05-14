@@ -184,3 +184,14 @@ SUList<DataType>& SUList<DataType>::operator=(const SUList<DataType>& old)
     }
     return *this;
 }
+
+template <class DataType>
+void SUList<DataType>::display()
+{
+    ListNode* cursor = head;
+    while(cursor != nullptr)
+    {
+        cout << cursor->data << endl;
+        cursor = cursor->next;
+    }
+}

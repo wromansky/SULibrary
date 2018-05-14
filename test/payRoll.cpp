@@ -41,7 +41,7 @@ void payRoll::setHours(double h)
 
 // Sets pay to rate multiplied by hours
 // then returns it
-double payRoll::calculatePay()
+double payRoll::calculatePay()const
 {
 	return rate * hours;
 }
@@ -70,7 +70,7 @@ double payRoll::getPay()
 	return rate * hours;
 }
 
-void payRoll::printPayCheck()
+void payRoll::printPayCheck()const
 {
 	double pay = calculatePay();
 	cout << name << "   Rate: " << rate << "  Hours Worked: " << hours << "  Gross Pay: $" << pay << endl << endl;
