@@ -1,25 +1,24 @@
-// Author for this file: Leomar Olivares. Comments by Billy Romansky
 // Implementation file for the SUQueue Class
 #include <iostream>
 using namespace std;
 
 //Defined SUQueue using LINKED LIST
 
-// Default Constructor
+// Default Constructor Author: Leomar Olivares
 template <class DataType>
 SUQueueList<DataType>::SUQueueList()
 {
     SUList<DataType> list;
 }
 
-// Copy Constructor
+// Copy Constructor Author: Leomar Olivares
 template <class DataType>
 SUQueueList<DataType>::SUQueueList(const SUQueueList &old)
 {
    list = old.list;
 }
 
-// Destructor
+// Destructor Author: Billy  Romansky
 template <class DataType>
 SUQueueList<DataType>::~SUQueueList()
 {
@@ -27,6 +26,7 @@ SUQueueList<DataType>::~SUQueueList()
 }
 
 // Reveals number of elements in the Queue Linked List
+// Author: Leomar Olivares
 template <class DataType>
 int SUQueueList<DataType>::size() const
 {
@@ -37,6 +37,7 @@ int SUQueueList<DataType>::size() const
 }
 
 // Check if the Queue linked list is empty
+// Author: Leomar Olivares
 template <class DataType>
 bool SUQueueList<DataType>::isEmpty() const
 {
@@ -51,6 +52,7 @@ bool SUQueueList<DataType>::isEmpty() const
 }
 
 // Inserts an element to the back of the linked list
+// Author: Leomar Olivares
 template <class DataType>
 void SUQueueList<DataType>::enqueue(const DataType &e)
 {
@@ -58,6 +60,7 @@ void SUQueueList<DataType>::enqueue(const DataType &e)
 }
 
 // Removes the first element up front of the linked list
+// Author: Leomar Olivares
 template <class DataType>
 void SUQueueList<DataType>::dequeue(DataType &d)
 {
@@ -65,6 +68,7 @@ void SUQueueList<DataType>::dequeue(DataType &d)
 }
 
 // Assignment operation that takes a const argument to make no changes
+// Author: Leomar Olivares
 template <class DataType>
 SUQueueList<DataType>& SUQueueList<DataType>::operator=(const SUQueueList<DataType> &n)
 {
@@ -74,6 +78,7 @@ SUQueueList<DataType>& SUQueueList<DataType>::operator=(const SUQueueList<DataTy
 
 
 //Prints the queue linked list information from head to tail
+// Author: Leomar Olivares
 template <class DataType>
 void SUQueueList<DataType>::printQueue() const
 {
@@ -90,10 +95,10 @@ void SUQueueList<DataType>::printQueue() const
 }
 
 //==============================================================================
-
+// Array Definitions Author: Leomar Olivares
 // Defined SUQueue using ARRAY
 
-// // Default constructor
+// Default constructor
 template <class DataType>
 SUQueueArray<DataType>::SUQueueArray()
 {

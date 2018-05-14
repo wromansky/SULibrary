@@ -1,3 +1,4 @@
+// Author:  Billy Romansky
 #ifndef SULIST_H
 #define SULIST_H
 

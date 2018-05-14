@@ -1,3 +1,4 @@
+// Author: Billy Romansky
 // Implementation file for the SUList Class
 #include <iostream>
 using namespace std;

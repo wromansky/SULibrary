@@ -7,13 +7,17 @@ using namespace std;
 //Defined SUStack using LINKED LIST
 
 //Default Constructor
+// Author: Billy Romansky
 template <class DataType>
 SUStackList<DataType>::SUStackList()
 {
-   list = nullptr;
+  // No need for a constructor because
+  // the list constructor is called
+  // in the private member function
 }
 
 //Copy Constructor
+// Author: Leomar Olivares
 template <class DataType>
 SUStackList<DataType>::SUStackList(const SUStackList &old)
 {
@@ -21,13 +25,15 @@ SUStackList<DataType>::SUStackList(const SUStackList &old)
 }
 
 // Destructor
+// Author: Billy Romansky
 template <class DataType>
 SUStackList<DataType>::~SUStackList()
 {
-   delete list;
+   list.~SUList();
 }
 
 // Reveal the number of elements in the stack list
+// Author: Leomar Olivares
 template <class DataType>
 int SUStackList<DataType>::size() const
 {
@@ -38,6 +44,7 @@ int SUStackList<DataType>::size() const
 }
 
 //Reveal if the stack list is empty
+//Author: Leomar Olivares
 template <class DataType>
 bool SUStackList<DataType>::isEmpty() const
 {
@@ -52,14 +59,16 @@ bool SUStackList<DataType>::isEmpty() const
   //return list.isEmpty();
 }
 
-//Push function for the stack list
+// Push function for the stack list
+// Author: Leomar Olivares
 template <class DataType>
 void SUStackList<DataType>::push(const DataType &pu)
 {
   list.putFront(pu);
 }
 
-//Pop function for the stack list
+// Pop function for the stack list
+// Author: Leomar Olivares
 template <class DataType>
 void SUStackList<DataType>::pop(DataType &po)
 {
@@ -67,6 +76,7 @@ void SUStackList<DataType>::pop(DataType &po)
 }
 
 // Assignment Overloader with arguments
+// Author: Leomar Olivares
 template <class DataType>
 SUStackList<DataType>& SUStackList<DataType>::operator=(const SUStackList<DataType> &n)
 {
@@ -74,6 +84,7 @@ SUStackList<DataType>& SUStackList<DataType>::operator=(const SUStackList<DataTy
 }
 
 // Prints stack list information top to bottom
+// Author: Leomar Olivares
 template <class DataType>
 void SUStackList<DataType>::printStack() const
 {
@@ -91,8 +102,15 @@ void SUStackList<DataType>::printStack() const
   // return printStack();
 }
 
-//==========================================================================
+// Author: Billy Romansky
+template <class DataType>
+void SUStackList<DataType>::display()
+{
+    list.display();
+}
 
+//==========================================================================
+// Array Definitions Author: Leomar Olivares
 // Defined SUStack using ARRAY
 
 //Default Constructor

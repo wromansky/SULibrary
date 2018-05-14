@@ -33,15 +33,15 @@ payRoll p;
   SUList<int> myList;
   SUList<payRoll> pList;
 
-  //SUStackArr<int> iStackArr; // TODO
-  //SUStackArr<PayRoll> pStackArr; // TODO
-  //SUStackList<int> iStackList; // TODO
-  //SUStackList<payRoll> pStackList;
+  SUStackArray<int> iStackArr; // TODO
+  SUStackArray<payRoll> pStackArr; // TODO
+  SUStackList<int> iStackList; // TODO
+  SUStackList<payRoll> pStackList;
 
-  //SUQueueArray<int> iQueueArr; // TODO
-  //SUQueueArray<payRoll> pQueueArr; // TODO 
-  //SUQueueList<int> iQueueList; // TODO
-  //SUQueueList<payRoll> pQueueList; // TODO
+  SUQueueArray<int> iQueueArr; // TODO
+  SUQueueArray<payRoll> pQueueArr; // TODO 
+  SUQueueList<int> iQueueList; // TODO
+  SUQueueList<payRoll> pQueueList; // TODO
 
   /**
    * Test the SUList using ints
@@ -53,27 +53,30 @@ payRoll p;
   myList.putBack(5);
   myList.putFront(3);
   myList.display(); 
-  
+
+
+  cout << "==================" << endl;
+
   pList.putFront(payRoll("Alice", 10, 35));
   pList.putFront(payRoll("Bob", 20, 35));
   pList.putBack(payRoll("Charlie", 25, 35));
   pList.putBack(payRoll("Diana", 10, 35));
   pList.putFront(payRoll("Eve", 30, 35));
-  //pList.display();
-  payRoll n = pList.getFront();
-  cout << n;
+  pList.display();
 
+
+  cout << "==================" << endl;
   /**
    * Test the SUStack using PayRoll
    */
-  /*
+  
   pStackList.push(payRoll("Alice", 20, 35));
   pStackList.push(payRoll("Bob", 20, 35));
   pStackList.push(payRoll("Charlie", 20, 35));
   pStackList.push(payRoll("Diana", 20, 35));
   pStackList.push(payRoll("Eve", 20, 35));
-  pStackList.pop().printPayCheck();
-*/
+  pStackList.display();
+
   return 0;
 }
 
