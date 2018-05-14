@@ -1,6 +1,8 @@
 # SULibrary
 Authors: Leomar Olivares & Billy Romansky
+
 www.github.com/wromansky/SULibrary
+
 README by Billy Romansky
 
 ## Project Description
