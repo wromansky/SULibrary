@@ -1,0 +1,42 @@
+[billy@wromansky project3]$ ./bin/project3 
+3
+2
+6
+1
+4
+5
+==================
+Eve   Rate: 30  Hours Worked: 35  Gross Pay: $1050
+
+
+Bob   Rate: 20  Hours Worked: 35  Gross Pay: $700
+
+
+Alice   Rate: 10  Hours Worked: 35  Gross Pay: $350
+
+
+Charlie   Rate: 25  Hours Worked: 35  Gross Pay: $875
+
+
+Diana   Rate: 10  Hours Worked: 35  Gross Pay: $350
+
+
+==================
+Eve   Rate: 20  Hours Worked: 35  Gross Pay: $700
+
+
+Diana   Rate: 20  Hours Worked: 35  Gross Pay: $700
+
+
+Charlie   Rate: 20  Hours Worked: 35  Gross Pay: $700
+
+
+Bob   Rate: 20  Hours Worked: 35  Gross Pay: $700
+
+
+Alice   Rate: 20  Hours Worked: 35  Gross Pay: $700
+
+
+free(): invalid pointer
+Aborted (core dumped)
+
